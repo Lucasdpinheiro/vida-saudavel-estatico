@@ -1,0 +1,57 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.card {
+    height: 30%;
+    width: 80%;
+}
+
+.login-input {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.create-button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #55e55d;
+    border: #55e55d;
+}
+
+.create-button:hover {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #44d44c;
+    border: #44d44c;
+}
