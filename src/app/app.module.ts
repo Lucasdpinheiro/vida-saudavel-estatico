@@ -1,31 +1,37 @@
 import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { PrimeNGConfig } from 'primeng/api';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    PrimeNGConfig
+    FormsModule,
+    
+
+    ButtonModule,
+    CardModule,
+    InputTextModule,
+    RippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule implements OnInit{
-
-  constructor(private primengConfig: PrimeNGConfig) {}
-
-  ngOnInit(): void {
-    this.primengConfig.ripple = true;
-  }
-}
+export class AppModule{ }
