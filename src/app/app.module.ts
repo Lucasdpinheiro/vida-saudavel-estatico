@@ -1,4 +1,4 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +13,8 @@ import {CardModule} from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +22,12 @@ import { RippleModule } from 'primeng/ripple';
     LoginComponent
   ],
   imports: [
+    HttpClientModule,
+
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    
 
     ButtonModule,
     CardModule,
