@@ -1,7 +1,7 @@
 export interface User {
     id?: number;
     fullName: string;
-    birthDay: Date;
+    birthDay?: Date;
     weight: number;
     height: number;
     sex: string;
