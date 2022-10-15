@@ -8,18 +8,29 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
-import {ButtonModule} from 'primeng/button';
-import {CardModule} from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
+import {DropdownModule} from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginCardComponent } from './login/login-card/login-card.component';
+import { LoginBrandComponent } from './login/login-brand/login-brand.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PageNotFoundComponent,
+    LoginCardComponent,
+    LoginBrandComponent,
+    LoginFormComponent
   ],
   imports: [
     HttpClientModule,
@@ -30,7 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
 
     ButtonModule,
+    CalendarModule,
     CardModule,
+    DialogModule,
+    DropdownModule,
     InputTextModule,
     RippleModule
   ],
