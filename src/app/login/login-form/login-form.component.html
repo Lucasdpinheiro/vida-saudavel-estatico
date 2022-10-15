@@ -1,0 +1,73 @@
+<p-dialog style="height: 300px" [(visible)]="visible" [modal]="true" [draggable]="false" [closable]="false"
+    [showHeader]="false">
+    <div class="p-d-flex p-flex-column form-container">
+        <div class="p-d-flex p-flex-row header">
+            <h2>Create new Account</h2>
+            <button pButton pRipple class="close-button" type="button" icon="pi pi-times"
+                (click)="closeForm()"></button>
+        </div>
+        <div class="p-d-flex p-flex-row input-container">
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <input pInputText type="text" id="fullName" aria-describedby="fullNameWarn"
+                        [(ngModel)]="user.fullName"  style="width: 100% !important;"/>
+                    <label for="fullName">Nome Completo</label>
+                </span>
+                <small id="fullNameWarn" class="p-error">{{ warnings.fullName }}</small>
+            </div>
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <p-calendar inputId="birthDay" dateFormat="dd-mm-yy" aria-describedby="birthDayWarn"
+                        [showIcon]="true" [appendTo]="'body'" [(ngModel)]="user.birthDay">
+                    </p-calendar>
+                    <label for="birthDay">Data de Nascimento</label>
+                </span>
+                <small id="birthDayWarn" class="p-error">{{ warnings.birthDay }}</small>
+            </div>
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <input pInputText type="text" id="weight" aria-describedby="weightWarn" [(ngModel)]="user.weight" />
+                    <label for="weight">Peso (hg)</label>
+                </span>
+                <small id="weightWarn" class="p-error">{{ warnings.weight }}</small>
+            </div>
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <input pInputText type="text" id="height" aria-describedby="heightWarn" [(ngModel)]="user.height" />
+                    <label for="height">Altura (cm)</label>
+                </span>
+                <small id="heightWarn" class="p-error">{{ warnings.height }}</small>
+            </div>
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <p-dropdown id="sex" aria-describedby="sexWarn" [options]="sex" optionLabel="display"
+                        [(ngModel)]="user.sex"></p-dropdown>
+                    <label for="sex">Sexo</label>
+                </span>
+                <small id="sexWarn" class="p-error">{{ warnings.sex }}</small>
+            </div>
+
+            <div class="">
+                <span class="p-float-label p-m-1">
+                    <p-dropdown id="activityLevel" aria-describedby="activityLevelWarn" [options]="activityLevel"
+                        optionLabel="display" [(ngModel)]="user.activityLevel"></p-dropdown>
+                    <label for="activityLevel">Atividade Física</label>
+                </span>
+                <small id="activityLevelWarn" class="p-error">{{ warnings.activityLevel }}</small>
+            </div>
+        </div>
+        <!-- <div class="p-d-flex p-flex-row footer">
+            <button pButton pRipple pTooltip="Salvar tarefa" class="save-button" type="button" icon="pi pi-save"
+                (click)="saveNewTask()" tooltipPosition="bottom" [showDelay]="1000"></button>
+            <button pButton pRipple pTooltip="Limpar campos" class="refresh-button" type="button" icon="pi pi-refresh"
+                (click)="cleanNewTaskTab()" tooltipPosition="bottom" [showDelay]="1000"></button>
+            <button pButton pRipple pTooltip="Cancelar" class="cancel-button" type="button" icon="pi pi-times"
+                (click)="cancelNewTask()" tooltipPosition="bottom" [showDelay]="1000"></button>
+        </div> -->
+    </div>
+</p-dialog>
