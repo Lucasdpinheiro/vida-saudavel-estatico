@@ -1,0 +1,26 @@
+<div>
+    <p-card class="card">
+        <div>
+            <span class="p-float-label">
+                <input pInputText type="text" class="input" id="fullName" aria-describedby="fullNameWarn"
+                    [(ngModel)]="fullName">
+                <label for="fullName">Nome</label>
+            </span>
+            <small id="fullNameWarn">{{fullNameWarn}}</small>
+        </div>
+        <div style="margin-top:30px">
+            <span class="p-float-label">
+                <input pInputText type="text" class="input" id="id" aria-describedby="idWarn" [(ngModel)]="userId">
+                <label for="id">ID</label>
+            </span>
+            <small id="idWarn">{{idWarn}}</small>
+        </div>
+        <button pButton pRipple class="login-button" type="button" label="Sign In" icon="pi pi-sign-in"
+            (click)="signInValidation()"></button>
+        <button pButton pRipple class="create-button" type="button" label="Create New Account" icon="pi pi-plus"
+            (click)="createNewAccount()"></button>
+    </p-card>
+</div>
+
+<app-login-form [visible]="openCreateNewUserModal" (closeEvent)="closeNewAccountModal()">
+</app-login-form>

@@ -1,0 +1,27 @@
+.input {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.create-button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #55e55d;
+    border: #55e55d;
+}
+
+.create-button:hover {
+    background-color: #44d44c;
+    border: #44d44c;
+}
+
+.create-button:focus {
+    box-shadow: 0 0 0 1px #77f77f;
+}
